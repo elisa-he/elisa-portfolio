@@ -1,0 +1,94 @@
+@use 'font' as *; 
+
+.logo {
+    width: 4.33rem;
+    height: auto;
+    padding: 1.5rem;
+}
+
+
+
+.logoWrapper {
+    text-align: center;
+}
+
+
+//home top section
+
+.title {
+    font-family: $titleFont;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+
+    .elisa {
+        font-family: $titleFont;
+        position: relative;
+        color: white;
+        // -webkit-text-stroke: 1px black;
+        // text-transform: uppercase;
+    }
+
+    .elisa::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #C4C9A5;
+        -webkit-text-stroke: .5px #C4C9A5;
+        border-right: 2px solid #C4C9A5;
+        overflow: hidden;
+        animation: animate 5s infinite;
+       
+
+       
+    }
+    
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+
+    20%, 100%{
+        width: 100%; 
+    }
+}
+
+// home bottome section
+
+#bottom {
+    display: flex;
+    justify-content: center;
+    font-family: $bodyFont;
+    font-size: .8rem;
+    color: #C4C9A5;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+
+.learnLink {
+    display: block;
+    font-weight: 300;
+    text-decoration: none;
+    color: #C4C9A5;
+    padding: 1rem;
+}
+
+.line {
+    height: 21.75rem;
+    width: 0;
+    background-color: #C4C9A5;
+    border: 1.5px solid #C4C9A5;
+    opacity: 0.3;
+    border-radius: 5px;
+}

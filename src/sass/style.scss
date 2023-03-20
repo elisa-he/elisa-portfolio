@@ -1,0 +1,9 @@
+@use 'normalize';
+@use 'font' as *; 
+@use 'homepage';
+@use 'navbar';
+@use 'about';
+
+body {
+    font-family: $bodyFont;
+}
