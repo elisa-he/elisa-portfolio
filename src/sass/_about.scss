@@ -1,8 +1,6 @@
 @use 'font' as *; 
 
-.center {
-    margin: 0 auto;
-}
+
 .firstRow, .secondRow {
     display: flex;
     justify-content: center;
@@ -41,6 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 3rem;
 }
 
 .workBtn {
@@ -66,35 +65,19 @@
     text-transform: uppercase;
 }
 
-.highlightContain {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    height: 4rem;
-    width: 100%;
-    align-items:end
-}
+
 
 h2.uppercase {
     text-align: center;
     padding: 0 10px;
     margin: 0;
-    position: relative;
-    margin-left: -13%;
-    margin-right: -10%;
-   
-    
-}
-
-
-
-.highlight {
-    position: absolute;
-   
-    background: linear-gradient(
+     background: linear-gradient(
         to bottom, 
         transparent 50%, 
         #C4C9A5 50%
     );
+    
 }
+
+
 

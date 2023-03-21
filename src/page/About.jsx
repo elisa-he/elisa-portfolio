@@ -1,5 +1,5 @@
 import about from "../content-json/about.json";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const indoorHobby =
@@ -27,9 +27,9 @@ export default function About() {
           <p className="secondDesc">
             {about && about.description[1].desc}
             <br />
-            <a href="" className="workBtn">
+            <Link to={`/work`} className="workBtn">
               My Work
-            </a>
+            </Link>
           </p>
           <img
             src={about && about.image[1].url}
@@ -39,10 +39,8 @@ export default function About() {
         </div>
       </section>
       <section id="hobby">
-        <div className="highlightContain">
-          <div className="highlight">
-            <h2 className="uppercase">What I Like To Do</h2>
-          </div>
+        <div className="highlight">
+          <h2 className="uppercase">What I Like To Do</h2>
         </div>
         <div className="contentWrap">
           <p>

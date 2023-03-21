@@ -407,7 +407,6 @@ button.twist {
 
 .navLink {
   display: flex;
-  background-color: #C4C9A5;
   width: 22.125rem;
   border-radius: 10rem;
   height: 2.875rem;
@@ -441,9 +440,7 @@ button.twist {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #C4C9A5;
   cursor: pointer;
-  background-color: #C4C9A5;
   position: absolute;
   flex-direction: column;
 }
@@ -452,10 +449,6 @@ button.twist {
   position: fixed;
   bottom: 8%;
   width: 100%;
-}
-
-.center {
-  margin: 0 auto;
 }
 
 .firstRow, .secondRow {
@@ -489,6 +482,7 @@ button.twist {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 3rem;
 }
 
 .workBtn {
@@ -511,26 +505,10 @@ button.twist {
   text-transform: uppercase;
 }
 
-.highlightContain {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  height: 4rem;
-  width: 100%;
-  align-items: end;
-}
-
 h2.uppercase {
   text-align: center;
   padding: 0 10px;
   margin: 0;
-  position: relative;
-  margin-left: -13%;
-  margin-right: -10%;
-}
-
-.highlight {
-  position: absolute;
   background: linear-gradient(to bottom, transparent 50%, #C4C9A5 50%);
 }
 
@@ -550,10 +528,34 @@ h2.uppercase {
   cursor: pointer;
 }
 
+#work .highlight {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
 body {
   font-family: "Mulish", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.mainColor {
+  background-color: #C4C9A5;
+  border: #C4C9A5;
+}
+
+.blueColor {
+  background-color: #88B5DF;
+  border: #88B5DF;
 }/*# sourceMappingURL=style.css.map */

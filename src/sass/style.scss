@@ -4,11 +4,31 @@
 @use 'navbar';
 @use 'about';
 @use 'footer';
+@use 'work'; 
 
 body {
     font-family: $bodyFont;
+    
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+h2 {
+    font-family: $titleFont;
+}
+
+.center {
+    text-align: center;
+}
+
+.mainColor {
+    background-color: #C4C9A5;
+    border: #C4C9A5;
+}
+
+.blueColor {
+    background-color: #88B5DF;
+    border: #88B5DF;
 }

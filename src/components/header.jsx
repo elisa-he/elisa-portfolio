@@ -1,6 +1,6 @@
 import "../styles/style.css";
-import logo from "../image/.eh.svg";
-export default function Header() {
+
+export default function Header({ logo }) {
   return (
     <>
       <div className="logoWrapper">
