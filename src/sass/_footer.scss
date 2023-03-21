@@ -1,0 +1,15 @@
+#footer {
+    padding: 1.5rem;
+    padding-bottom: 0;
+    display: flex;
+    font-size: .625rem;
+    justify-content: center;
+    position: relative;
+    align-items: end;
+    img {
+        position: absolute;
+        right: .625rem;
+        bottom: .625rem;
+        cursor: pointer;
+    }
+}

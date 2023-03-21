@@ -3,7 +3,12 @@
 @use 'homepage';
 @use 'navbar';
 @use 'about';
+@use 'footer';
 
 body {
     font-family: $bodyFont;
+}
+
+html {
+    scroll-behavior: smooth;
 }
