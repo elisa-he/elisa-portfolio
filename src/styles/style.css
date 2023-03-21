@@ -460,6 +460,7 @@ button.twist {
 
 .firstRow, .secondRow {
   display: flex;
+  justify-content: center;
 }
 .firstRow p, .secondRow p {
   width: 12.5rem;
@@ -482,6 +483,12 @@ button.twist {
 
 #about p, #about li, #hobby p, #hobby li {
   font-size: 0.88rem;
+}
+
+#hobby {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .workBtn {
@@ -519,6 +526,7 @@ h2.uppercase {
   margin: 0;
   position: relative;
   margin-left: -13%;
+  margin-right: -10%;
 }
 
 .highlight {

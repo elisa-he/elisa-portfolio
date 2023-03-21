@@ -3,10 +3,12 @@ import { useState } from "react";
 
 export default function About() {
   const indoorHobby =
-    about && about.hobbyList[0].indoorHobby.map((hobby) => <li>{hobby}</li>);
+    about &&
+    about.hobbyList[0].indoorHobby.map((hobby, i) => <li key={i}>{hobby}</li>);
 
   const outdoorHobby =
-    about && about.hobbyList[1].outdoorHobby.map((hobby) => <li>{hobby}</li>);
+    about &&
+    about.hobbyList[1].outdoorHobby.map((hobby, i) => <li key={i}>{hobby}</li>);
   return (
     <>
       <section id="about">

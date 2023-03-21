@@ -5,6 +5,7 @@
 }
 .firstRow, .secondRow {
     display: flex;
+    justify-content: center;
     p {
         width: 12.5rem;
         line-height: 1.8;
@@ -33,6 +34,13 @@
     p,li {
         font-size: .88rem;
     }
+   
+}
+
+#hobby {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .workBtn {
@@ -50,6 +58,7 @@
 .contentWrap {
   padding: 0 3.125rem;
   line-height: 1.8;
+
   
 }
 
@@ -72,6 +81,7 @@ h2.uppercase {
     margin: 0;
     position: relative;
     margin-left: -13%;
+    margin-right: -10%;
    
     
 }
@@ -87,3 +97,4 @@ h2.uppercase {
         #C4C9A5 50%
     );
 }
+
