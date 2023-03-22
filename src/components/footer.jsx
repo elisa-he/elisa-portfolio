@@ -7,7 +7,12 @@ export default function Footer() {
     <>
       <section id="footer">
         <p className="footer uppercase">copyright by elisa</p>
-        <img src={arrow} alt="arrow vector" onClick={scrollUp} />
+        <img
+          className="arrow"
+          src={arrow}
+          alt="arrow vector"
+          onClick={scrollUp}
+        />
       </section>
     </>
   );

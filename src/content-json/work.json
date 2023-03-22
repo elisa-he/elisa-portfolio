@@ -1,9 +1,5 @@
 [
     {
-
-
-     "portfolioOne":
-     {
         "title":"Portfolio", 
         "usedSkill":
         [
@@ -20,12 +16,11 @@
         "learnedDesc": "Cat ipsum dolor sit amet, show belly love me!. Pee in human's bed until he cleans the litter box. Meow to be let in scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food"
      }, 
 
-     "portfolioTwo":
      {
         "title": "BingeWatch", 
         "usedSkill":
         [
-            "react", "sass", "javascript", "html"
+            "react API", "sass", "javascript", "html"
         ], 
         "usedTool":
         [
@@ -37,8 +32,6 @@
         "developmentDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog",
         "learnedDesc": "Cat ipsum dolor sit amet, show belly love me!. Pee in human's bed until he cleans the litter box. Meow to be let in scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food"
      },
-
-        "portfolioThree":
      {
         "title": "Extreme RPS", 
         "usedSkill":
@@ -55,8 +48,5 @@
         "developmentDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog",
         "learnedDesc": "Cat ipsum dolor sit amet, show belly love me!. Pee in human's bed until he cleans the litter box. Meow to be let in scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food"
      }
-
-
-    }
-
-]
+    
+     ]

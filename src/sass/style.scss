@@ -5,6 +5,7 @@
 @use 'about';
 @use 'footer';
 @use 'work'; 
+@use 'contact';
 
 body {
     font-family: $bodyFont;
@@ -32,3 +33,18 @@ h2 {
     background-color: #88B5DF;
     border: #88B5DF;
 }
+
+.lineHeight {
+    line-height: 1.8;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#footer {
+    margin-top: auto; 
+}
+

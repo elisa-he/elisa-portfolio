@@ -410,6 +410,8 @@ button.twist {
   width: 22.125rem;
   border-radius: 10rem;
   height: 2.875rem;
+  align-items: center;
+  justify-content: space-around;
 }
 .navLink ul {
   display: flex;
@@ -509,6 +511,9 @@ h2.uppercase {
   text-align: center;
   padding: 0 10px;
   margin: 0;
+}
+
+.green {
   background: linear-gradient(to bottom, transparent 50%, #C4C9A5 50%);
 }
 
@@ -532,6 +537,28 @@ h2.uppercase {
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
+}
+
+.blue {
+  background: linear-gradient(to bottom, transparent 50%, #88B5DF 50%);
+}
+
+#contact {
+  padding-top: 8.0625rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 21.9375rem;
+  margin: 0 auto;
+}
+
+p.center {
+  width: 20rem;
+  padding-top: 1.375rem;
+}
+
+.contactIcons img {
+  padding: 2rem 0.8rem;
 }
 
 body {
@@ -558,4 +585,18 @@ h2 {
 .blueColor {
   background-color: #88B5DF;
   border: #88B5DF;
+}
+
+.lineHeight {
+  line-height: 1.8;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#footer {
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */

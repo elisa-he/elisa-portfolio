@@ -1,0 +1,28 @@
+.blue {
+    background: linear-gradient(
+        to bottom, 
+        transparent 50%, 
+        #88B5DF 50%
+    );
+}
+
+#contact {
+    padding-top: 8.0625rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 21.9375rem;
+    margin: 0 auto;
+}
+
+p.center {
+    width: 20rem;
+    padding-top: 1.375rem;
+}
+
+.contactIcons {
+
+    img {
+        padding: 2rem .8rem;
+    }
+}

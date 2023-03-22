@@ -40,7 +40,7 @@ export default function About() {
       </section>
       <section id="hobby">
         <div className="highlight">
-          <h2 className="uppercase">What I Like To Do</h2>
+          <h2 className="uppercase green">What I Like To Do</h2>
         </div>
         <div className="contentWrap">
           <p>
