@@ -1,11 +1,13 @@
-import "../styles/style.css";
+import { Link } from "react-router-dom";
 
 export default function Header({ logo }) {
   return (
     <>
-      <div className="logoWrapper">
-        <img src={logo} alt="logo" className="logo" />
-      </div>
+      <Link to={`/`} className="link">
+        <div className="logoWrapper">
+          <img src={logo} alt="logo" className="logo" />
+        </div>
+      </Link>
     </>
   );
 }

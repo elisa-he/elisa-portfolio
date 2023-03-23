@@ -309,13 +309,13 @@ template {
 }
 
 .logo {
-  width: 4.33rem;
-  height: auto;
   padding: 1.5rem;
 }
 
 .logoWrapper {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
@@ -493,7 +493,7 @@ button.twist {
   text-decoration: none;
   font-weight: 700;
   background-color: black;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   color: white;
   border-radius: 5px;
 }
@@ -537,14 +537,77 @@ h2.uppercase {
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
+  padding-top: 1.8rem;
 }
 
 .skill {
   display: inline-block;
+  padding: 0 0.25rem;
 }
 
 .skill:not(:last-child) {
   border-right: solid 1px black;
+}
+
+.workImg {
+  width: 100%;
+  height: 10rem;
+}
+
+#work h3 {
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+#work ul {
+  align-content: center;
+  padding: 0;
+}
+
+#work li {
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+}
+
+.workWrap {
+  text-align: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  width: 18.75rem;
+}
+
+.workWrap:not(:first-child) {
+  margin-top: 1.9375rem;
+}
+
+.workCap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+.workCap h3, .workCap ul {
+  margin: 0;
+}
+.workCap ul {
+  display: flex;
+  align-items: center;
+}
+
+.workWrap:last-child {
+  padding-bottom: 3rem;
+}
+
+.workContent {
+  padding: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }
 
 .blue {
@@ -579,6 +642,7 @@ html {
 
 h2 {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
 }
 
 .center {

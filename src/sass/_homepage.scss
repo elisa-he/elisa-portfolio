@@ -1,8 +1,6 @@
 @use 'font' as *; 
 
 .logo {
-    width: 4.33rem;
-    height: auto;
     padding: 1.5rem;
 }
 
@@ -10,6 +8,8 @@
 
 .logoWrapper {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 

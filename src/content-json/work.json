@@ -1,5 +1,6 @@
 [
     {
+        "image": "src/image/coding.jpg",
         "title":"Portfolio", 
         "usedSkill":
         [
@@ -17,6 +18,7 @@
      }, 
 
      {
+        "image": "src/image/coding.jpg",
         "title": "BingeWatch", 
         "usedSkill":
         [
@@ -33,6 +35,7 @@
         "learnedDesc": "Cat ipsum dolor sit amet, show belly love me!. Pee in human's bed until he cleans the litter box. Meow to be let in scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food"
      },
      {
+        "image": "src/image/coding.jpg",
         "title": "Extreme RPS", 
         "usedSkill":
         [

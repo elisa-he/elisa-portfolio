@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Work from "./page/Work";
 import Contact from "./page/Contact";
+import Single from "./page/Single";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/work/:workId",
+    element: <Single />,
   },
 ]);
 

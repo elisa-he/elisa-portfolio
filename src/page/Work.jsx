@@ -3,28 +3,41 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import logo from "../image/.eh.svg";
 import works from "../content-json/work.json";
+import { Link } from "react-router-dom";
 export default function Work() {
   return (
     <>
       <Header logo={logo} />
       <section id="work">
-        <div className="highlight">
-          <h2 className="uppercase green">Works</h2>
+        <div className="workContent">
+          <div className="highlight">
+            <h2 className="uppercase green">Works</h2>
+          </div>
+          {works &&
+            works.map((work, i) => {
+              return (
+                <div className="workWrap" key={i}>
+                  <Link to={`/work/${i}`} className="link">
+                    <img
+                      className="workImg"
+                      src={work.image}
+                      alt="project images"
+                    />
+                    <div className="workCap">
+                      <h3>{work.title}</h3>
+                      <ul>
+                        {work.usedSkill.slice(0, 3).map((skill, i) => (
+                          <li key={i} className="skill">
+                            {skill}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
         </div>
-
-        {works &&
-          works.map((work, i) => {
-            return (
-              <div className="workWrap" key={i}>
-                <h3>{work.title}</h3>
-                {work.usedSkill.slice(0, 3).map((skill, i) => (
-                  <p key={i} className="skill">
-                    {skill}
-                  </p>
-                ))}
-              </div>
-            );
-          })}
       </section>
       <Navbar color="mainColor" />
       <Footer />

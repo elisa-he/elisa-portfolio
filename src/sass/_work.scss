@@ -1,14 +1,85 @@
+@use 'font' as *; 
 
 #work .highlight {
     display: flex;
     justify-content: flex-start;
     margin-left: 10px;
+    padding-top: 1.8rem;
+    
 }
 
 .skill {
     display: inline-block;
+    padding: 0 .25rem;
 }
 
 .skill:not(:last-child) {
     border-right: solid 1px black;
+}
+
+.workImg {
+    width: 100%;
+    height: 10rem;
+}
+
+#work h3 {
+    font-weight: 400;
+    font-family: $titleFont;
+    text-transform: uppercase;
+    font-size: .875rem;
+
+}
+
+#work ul {
+    align-content: center;
+    padding: 0;
+}
+
+#work li {
+    font-weight: 400;
+    font-family: $titleFont;
+    text-transform: capitalize;
+    font-size: .7rem;
+ 
+}
+
+.workWrap {
+    text-align: center;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    width: 18.75rem;
+}
+
+.workWrap:not(:first-child) {
+    margin-top: 1.9375rem;
+}
+
+.workCap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: .5rem;
+    h3, ul {
+        margin: 0;
+        
+    }
+
+
+    ul {
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+.workWrap:last-child {
+    padding-bottom: 3rem;
+}
+
+.workContent {
+    padding: 1rem;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }
