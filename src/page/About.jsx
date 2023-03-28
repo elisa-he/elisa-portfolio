@@ -7,10 +7,12 @@ export default function About() {
 
   const fetchData = useCallback(() => {
     fetch("../content-json/about.json")
-    .then(response => response.json())
-    .then(data =>{
+    .then(response =>response.json())
+    .then(data => {
+      console.log(data)
       setAbout(data)
-    });
+    })
+    .catch(error => console.error(error))
   },[])
 
   useEffect(() => {

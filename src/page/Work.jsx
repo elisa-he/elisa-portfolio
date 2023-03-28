@@ -13,7 +13,8 @@ export default function Work() {
     .then(response => response.json())
     .then(data =>{
       setWorks(data)
-    });
+    })
+    .catch(error => console.error(error))
   },[])
 
   useEffect(() => {

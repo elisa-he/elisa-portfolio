@@ -14,7 +14,8 @@ export default function Single() {
     .then(response => response.json())
     .then(data =>{
       setWorks(data)
-    });
+    })
+    .catch(error => console.error(error))
   },[])
 
   useEffect(() => {
