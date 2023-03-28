@@ -5,30 +5,29 @@ import logo from "../image/.eh.svg";
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function Work() {
-
-  const [works, setWorks] = useState(); 
+  const [works, setWorks] = useState();
 
   const fetchData = useCallback(() => {
     fetch("../content-json/work.json")
-    .then(response => response.json())
-    .then(data =>{
-      setWorks(data)
-    })
-    .catch(error => console.error(error))
-  },[])
+      .then((response) => response.json())
+      .then((data) => {
+        setWorks(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   useEffect(() => {
-    fetchData()
-  },[fetchData])
+    fetchData();
+  }, [fetchData]);
 
   return (
     <>
       <Header logo={logo} />
       <section id="work">
+        <div className="highlight">
+          <h2 className="uppercase green">Works</h2>
+        </div>
         <div className="workContent">
-          <div className="highlight">
-            <h2 className="uppercase green">Works</h2>
-          </div>
           {works &&
             works.map((work, i) => {
               return (

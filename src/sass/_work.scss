@@ -1,6 +1,6 @@
 @use 'font' as *; 
 
-#work .highlight {
+.highlight {
     display: flex;
     justify-content: flex-start;
     margin-left: 10px;
@@ -20,6 +20,7 @@
 .workImg {
     width: 100%;
     height: 10rem;
+   
 }
 
 #work h3 {
@@ -47,7 +48,6 @@
     text-align: center;
     padding-left: .625rem;
     padding-right: .625rem;
-    width: 18.75rem;
 }
 
 .workWrap:not(:first-child) {
@@ -77,6 +77,9 @@
 
 .workContent {
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .link {

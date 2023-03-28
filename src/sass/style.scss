@@ -6,6 +6,7 @@
 @use 'footer';
 @use 'work'; 
 @use 'contact';
+@use 'single';
 
 body {
     font-family: $bodyFont;
