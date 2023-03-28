@@ -1,7 +1,23 @@
-import about from "../content-json/about.json";
+// import about from "../content-json/about.json";
 import { Link } from "react-router-dom";
-
+import { useCallback, useEffect, useState } from "react";
 export default function About() {
+
+  const [about, setAbout] = useState(); 
+
+  const fetchData = useCallback(() => {
+    fetch("../content-json/about.json")
+    .then(response => response.json())
+    .then(data =>{
+      setAbout(data)
+    });
+  },[])
+
+  useEffect(() => {
+    fetchData()
+  },[fetchData])
+
+
   const indoorHobby =
     about &&
     about.hobbyList[0].indoorHobby.map((hobby, i) => <li key={i}>{hobby}</li>);
@@ -12,6 +28,7 @@ export default function About() {
   return (
     <>
       <section id="about">
+      
         <div className="firstRow">
           <img
             src={about && about.image[0].url}

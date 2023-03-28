@@ -2,9 +2,24 @@ import Navbar from "../components/navbar";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import logo from "../image/.eh.svg";
-import works from "../content-json/work.json";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function Work() {
+
+  const [works, setWorks] = useState(); 
+
+  const fetchData = useCallback(() => {
+    fetch("../content-json/work.json")
+    .then(response => response.json())
+    .then(data =>{
+      setWorks(data)
+    });
+  },[])
+
+  useEffect(() => {
+    fetchData()
+  },[fetchData])
+
   return (
     <>
       <Header logo={logo} />
@@ -20,13 +35,13 @@ export default function Work() {
                   <Link to={`/work/${i}`} className="link">
                     <img
                       className="workImg"
-                      src={work.image}
+                      src={work?.image}
                       alt="project images"
                     />
                     <div className="workCap">
-                      <h3>{work.title}</h3>
+                      <h3>{work?.title}</h3>
                       <ul>
-                        {work.usedSkill.slice(0, 3).map((skill, i) => (
+                        {work?.usedSkill.slice(0, 3).map((skill, i) => (
                           <li key={i} className="skill">
                             {skill}
                           </li>

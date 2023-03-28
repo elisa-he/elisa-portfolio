@@ -1,6 +1,6 @@
 [
     {
-        "image": "src/image/coding.jpg",
+        "image": "/src/image/coding.jpg",
         "title":"Portfolio", 
         "usedSkill":
         [
@@ -10,7 +10,7 @@
         [
             "figma", "github"
         ],
-        "team":"myself", 
+        "team":["myself"], 
         "desc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog", 
         "designDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog", 
         "developmentDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog",
@@ -18,7 +18,7 @@
      }, 
 
      {
-        "image": "src/image/coding.jpg",
+        "image": "/src/image/coding.jpg",
         "title": "BingeWatch", 
         "usedSkill":
         [
@@ -35,7 +35,7 @@
         "learnedDesc": "Cat ipsum dolor sit amet, show belly love me!. Pee in human's bed until he cleans the litter box. Meow to be let in scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food"
      },
      {
-        "image": "src/image/coding.jpg",
+        "image": "/src/image/coding.jpg",
         "title": "Extreme RPS", 
         "usedSkill":
         [
@@ -45,7 +45,7 @@
         [
             "figma", "github"
         ],
-        "team":"myself",
+        "team":["myself"],
         "desc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog", 
         "designDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog", 
         "developmentDesc": "Cat ipsum dolor sit amet, catching very fast laser pointer. Licks paws. Don't nosh on the birds i love cuddles eat a plant, kill a hand mmmmmmmmmeeeeeeeeooooooooowwwwwwww swat at dog",
