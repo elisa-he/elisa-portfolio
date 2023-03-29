@@ -2,23 +2,21 @@
 import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 export default function About() {
-
-  const [about, setAbout] = useState(); 
+  const [about, setAbout] = useState();
 
   const fetchData = useCallback(() => {
     fetch("../content-json/about.json")
-    .then(response =>response.json())
-    .then(data => {
-      console.log(data)
-      setAbout(data)
-    })
-    .catch(error => console.error(error))
-  },[])
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setAbout(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   useEffect(() => {
-    fetchData()
-  },[fetchData])
-
+    fetchData();
+  }, [fetchData]);
 
   const indoorHobby =
     about &&
@@ -30,7 +28,6 @@ export default function About() {
   return (
     <>
       <section id="about">
-      
         <div className="firstRow">
           <img
             src={about && about.image[0].url}

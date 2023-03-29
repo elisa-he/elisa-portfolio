@@ -19,7 +19,8 @@
 
 .workImg {
     width: 100%;
-    height: 10rem;
+    max-height: 15rem;
+    object-fit: cover;
    
 }
 
@@ -30,6 +31,8 @@
     font-size: .875rem;
 
 }
+
+
 
 #work ul {
     align-content: center;
@@ -80,9 +83,56 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
 .link {
     text-decoration: none;
     color: black;
+}
+
+@media screen and (min-width: 871px) {
+   
+#work {
+    margin: auto 0;
+
+    li, h3 {
+        font-size: 1rem ;
+    }
+}
+
+.workImg {
+    height: 20rem;
+    width: 100%;
+}
+
+ .workContent{ 
+    flex-direction: row;
+    max-width: 90rem;
+    justify-content: space-around;
+
+    .highlight h2{
+        font-size: 2.5rem;
+    }
+    
+    .highlight{
+        height: 2.5rem;
+        position: absolute;
+        top: 10%;
+
+    }
+
+    .workWrap {
+        padding: .5rem;
+        width: 400px;
+
+
+    }
+
+    .workWrap:last-child {
+        padding-bottom: 0;
+    }
+ }
+
 }

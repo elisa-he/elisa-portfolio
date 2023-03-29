@@ -26,3 +26,21 @@ p.center {
         padding: 2rem .8rem;
     }
 }
+
+
+@media screen and (min-width: 865px) {
+  
+
+    #contact h2 {
+        font-size: 2.5rem;
+    }
+
+    p.center {
+        width: auto;
+    }
+
+   #contact p {
+    font-size: 1.3rem;
+   }
+    
+}

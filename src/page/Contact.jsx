@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../image/.ehBlue.svg";
 import github from "../image/icons/github.svg";
 import linkedin from "../image/icons/linkedin.svg";
+import Background from "../components/background";
 
 export default function Contact() {
   return (
@@ -29,6 +30,7 @@ export default function Contact() {
       </section>
       <Navbar color="blueColor" />
       <Footer />
+      <Background />
     </>
   );
 }

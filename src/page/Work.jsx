@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import logo from "../image/.eh.svg";
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 export default function Work() {
   const [works, setWorks] = useState();
 
@@ -24,10 +25,11 @@ export default function Work() {
     <>
       <Header logo={logo} />
       <section id="work">
-        <div className="highlight">
-          <h2 className="uppercase green">Works</h2>
-        </div>
         <div className="workContent">
+          <div className="highlight">
+            <h2 className="uppercase green">Works</h2>
+          </div>
+
           {works &&
             works.map((work, i) => {
               return (
@@ -54,6 +56,7 @@ export default function Work() {
             })}
         </div>
       </section>
+
       <Navbar color="mainColor" />
       <Footer />
     </>

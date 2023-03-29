@@ -9,11 +9,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function Single() {
   const [works, setWorks] = useState();
-  const [openTab, setOpenTab] = useState(false);
-
-  const handleClick = () => {
-    setOpenTab(!openTab);
-  };
 
   const fetchData = useCallback(() => {
     fetch("../content-json/work.json")
@@ -55,10 +50,10 @@ export default function Single() {
     <>
       <Header logo={logo} />
       <section id="single">
-        <div className="highlight">
-          <h2 className=" uppercase green">{title}</h2>
-        </div>
         <div className="portfolioContent">
+          <div className="highlight">
+            <h2 className=" uppercase green">{title}</h2>
+          </div>
           <img className="workImg" src={image} alt="image of website" />
           <div className="workTop">
             <div className="workLeft">
@@ -74,6 +69,9 @@ export default function Single() {
           <p className="subtitle uppercase">team</p>
           <ul>{team}</ul>
           <p className="workDesc">{projectDesc}</p>
+          <Link to={`/`} className="btn black-outline ">
+            <button className="uppercase">live site</button>
+          </Link>
 
           <div className="tabs">
             <div className="tab">

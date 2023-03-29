@@ -7,9 +7,11 @@
 @use 'work'; 
 @use 'contact';
 @use 'single';
+@use 'background';
 
 body {
     font-family: $bodyFont;
+
     
 }
 
@@ -52,3 +54,24 @@ h2 {
     margin-top: auto; 
 }
 
+
+
+@media screen and (min-width: 865px) {
+    .logoWrapper {
+        justify-content: flex-start;
+        img {
+            width: 4rem;
+            height: auto;
+
+        }
+    }
+
+    .navMenu {
+        margin-left: 3rem;
+    }
+
+    #footer p {
+        font-size: 1rem;
+    }
+    
+}

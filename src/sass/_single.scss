@@ -2,6 +2,15 @@
 
 #single {
     margin-bottom: 2rem;
+
+    .highlight {
+        margin-left: 0;
+    }
+
+    h2{ 
+        margin-bottom: 1.9375rem;
+        
+    }
 }
 
 
@@ -10,11 +19,13 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 1rem;
+    max-width: 26.875rem;
+    margin: 0 auto;
 
     ul {
         display: flex;
         padding: 0;
-        margin: 0;
+        margin: .3rem 0;
         align-items: center;
         
     }
@@ -121,7 +132,7 @@
 }
 
 .btn, .btnGreen {
-    margin: .5rem auto;
+    margin: .2rem auto;
     text-decoration: none;
 }
 
@@ -134,3 +145,25 @@
 
     }
 }
+
+
+@media screen and (min-width: 865px) {
+   
+    
+     .portfolioContent{ 
+        
+        max-width: 40rem;
+
+        p {
+            font-size: 1rem;
+        }
+    
+        .highlight h2{
+            font-size: 2rem;
+            
+        }
+        
+    
+     }
+    
+    }
