@@ -15,7 +15,7 @@ export default function Navbar({ color }) {
     <div className="fixedMenu">
       <div className={`navMenu`}>
         <button
-          className={openNav ? `twist ${color}` : `${color}`}
+          className={`navToggle ${openNav ? `twist ${color}` : `${color}`}`}
           onClick={handleToggle}
         >
           <span className="dot one"></span>
@@ -26,13 +26,19 @@ export default function Navbar({ color }) {
         <nav className={`navLink ${color} ${openNav ? "active" : "disable"}`}>
           <ul className="navList">
             <li onClick={closeMenu}>
-              <Link to={`/`}>About</Link>
+              <Link to={`/`}>
+                <button className="navBtn">About</button>
+              </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link to={`/work`}>Works</Link>
+              <Link to={`/work`}>
+                <button className="navBtn">Works</button>
+              </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link to={`/contact`}>Contact</Link>
+              <Link to={`/contact`}>
+                <button className="navBtn">Contact</button>
+              </Link>
             </li>
           </ul>
         </nav>

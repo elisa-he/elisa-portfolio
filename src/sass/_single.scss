@@ -1,7 +1,136 @@
+@use 'font' as *; 
+
+#single {
+    margin-bottom: 2rem;
+}
+
+
 .portfolioContent {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 1rem;
+
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        
+    }
+
+    li {
+        list-style: none;
+        font-weight: 400;
+        font-size: .75rem;
+        padding: 0 .25rem;
+        text-transform: capitalize;
+
+    }
+
+    
    
+}
+
+.portfolioContent li:first-child {
+ padding-left: 0;
+}
+
+.portfolioContent li:not(:last-child) {
+    border-right: 1px solid black;
+   
+}
+
+.tab {
+    text-transform: capitalize;
+    border-bottom: 1px solid black;
+    padding-bottom: .375rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2.125rem 0 ;
+    cursor: pointer;
+    
+    h3 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+.noshow {
+    display: none;
+}
+
+.desc.active {
+    display: block;
+}
+
+.check {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.subtitle {
+    text-decoration: underline;
+    margin: 0;
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+
+.workTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: .4375rem 0 ;
+}
+
+.btnGreen button, .btn button {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .875rem;
+    width: 16.75rem;
+    height: 3rem;
+    border-radius: .9375rem;
+    color: black;
+    font-family: $titleFont ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnGreen button {
+   
+    background-color: #C4C9A5;
+    border: 0px;
+}
+
+.btn.black-outline button {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+ 
+    
+}
+
+.btn, .btnGreen {
+    margin: .5rem auto;
+    text-decoration: none;
+}
+
+.btn.black-outline:hover {
+
+    button{
+        background-color: black;
+        color: white;
+        
+
+    }
 }

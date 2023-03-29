@@ -1,13 +1,19 @@
 import Header from "../components/header";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import logo from "../image/.eh.svg";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import arrow from "../image/arrow-menu.svg";
 
 import { useParams } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function Single() {
   const [works, setWorks] = useState();
+  const [openTab, setOpenTab] = useState(false);
+
+  const handleClick = () => {
+    setOpenTab(!openTab);
+  };
 
   const fetchData = useCallback(() => {
     fetch("../content-json/work.json")
@@ -50,36 +56,62 @@ export default function Single() {
       <Header logo={logo} />
       <section id="single">
         <div className="highlight">
-          <h2 className="uppercase green">{title}</h2>
+          <h2 className=" uppercase green">{title}</h2>
         </div>
         <div className="portfolioContent">
           <img className="workImg" src={image} alt="image of website" />
-          <p className="subtitle uppercase">used skills</p>
-          <ul>{skills}</ul>
-          <p className="subtitle uppercase">used tools</p>
-          <ul>{tools}</ul>
+          <div className="workTop">
+            <div className="workLeft">
+              <p className="subtitle uppercase">used skills</p>
+              <ul>{skills}</ul>
+            </div>
+            <div className="workRight">
+              <p className="subtitle uppercase">used tools</p>
+              <ul>{tools}</ul>
+            </div>
+          </div>
+
           <p className="subtitle uppercase">team</p>
           <ul>{team}</ul>
           <p className="workDesc">{projectDesc}</p>
 
           <div className="tabs">
-            <h3 className="tab">planning</h3>
-            <p>{designDesc}</p>
-            <h3 className="tab">development</h3>
-            <p>{developmentDesc}</p>
-            <h3 className="tab">what i learned</h3>
-            <p>{learnedDesc}</p>
+            <div className="tab">
+              <input type="checkbox" name="planning" id="planning" />
+              <label className="check" htmlFor="planning">
+                <h3>planning</h3>
+                <img src={arrow} alt="arrow to right" />
+              </label>
+            </div>
+            <p className="desc">{designDesc}</p>
+            <div className="tab">
+              <input type="checkbox" name="development" id="development" />
+              <label className="check" htmlFor="development">
+                <h3>development</h3>
+                <img src={arrow} alt="arrow to right" />
+              </label>
+            </div>
+            <p className="desc">{developmentDesc}</p>
+            <div className="tab">
+              <input type="checkbox" name="learn" id="learn" />
+              <label className="check" htmlFor="learn">
+                <h3>what i learned</h3>
+                <img src={arrow} alt="arrow to right" />
+              </label>
+            </div>
+            <p className="desc">{learnedDesc}</p>
           </div>
 
-          <Link to={`/work`} className="workBtn">
-            check out more projects
+          <Link to={`/work`} className="btnGreen ">
+            <button className="uppercase"> check out more projects</button>
           </Link>
-          <Link to={`/contact`} className="workBtn">
-            get in touch
+          <Link to={`/contact`} className="btn black-outline ">
+            <button className="uppercase">get in touch</button>
           </Link>
         </div>
       </section>
       <Navbar color="mainColor" />
+      <Footer />
     </>
   );
 }

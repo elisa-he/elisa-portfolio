@@ -50,26 +50,34 @@ button.twist {
 
     li {
 
-        padding-right: 2rem;
+        padding-right: 1rem;
          display: flex;
         list-style: none;
-        a {
-            text-decoration: none;
-            font-family: $titleFont;
-            font-size: .75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: black;
-            
-        }
+    
     }
 }
+
+.navBtn {
+    background-color: transparent;
+    border: 0;
+    height: 2.875rem;
+    width: 4.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: $titleFont;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+
+}
+
 
 .navMenu {
     position: relative;
     margin-left: .3125rem;
     
-    button {
+   .navToggle {
         width: 2.875rem;
         height: 2.875rem;
         border-radius: 50%;
