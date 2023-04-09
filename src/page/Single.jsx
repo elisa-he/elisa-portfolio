@@ -1,8 +1,8 @@
 import Header from "../components/header";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import logo from "../image/.eh.svg";
-import arrow from "../image/arrow-menu.svg";
+import logo from "../image/eh.svg";
+import Accordion from "../components/accordion";
 
 import { useParams } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
@@ -42,10 +42,6 @@ export default function Single() {
 
   const projectDesc = works?.length && works[workId]?.desc;
 
-  const designDesc = works?.length && works[workId]?.designDesc;
-  const developmentDesc = works?.length && works[workId]?.developmentDesc;
-  const learnedDesc = works?.length && works[workId]?.learnedDesc;
-
   return (
     <>
       <Header logo={logo} />
@@ -73,39 +69,16 @@ export default function Single() {
             <button className="uppercase">live site</button>
           </Link>
 
-          <div className="tabs">
-            <div className="tab">
-              <input type="checkbox" name="planning" id="planning" />
-              <label className="check" htmlFor="planning">
-                <h3>planning</h3>
-                <img src={arrow} alt="arrow to right" />
-              </label>
-            </div>
-            <p className="desc">{designDesc}</p>
-            <div className="tab">
-              <input type="checkbox" name="development" id="development" />
-              <label className="check" htmlFor="development">
-                <h3>development</h3>
-                <img src={arrow} alt="arrow to right" />
-              </label>
-            </div>
-            <p className="desc">{developmentDesc}</p>
-            <div className="tab">
-              <input type="checkbox" name="learn" id="learn" />
-              <label className="check" htmlFor="learn">
-                <h3>what i learned</h3>
-                <img src={arrow} alt="arrow to right" />
-              </label>
-            </div>
-            <p className="desc">{learnedDesc}</p>
-          </div>
+          <Accordion />
 
-          <Link to={`/work`} className="btnGreen ">
-            <button className="uppercase"> check out more projects</button>
-          </Link>
-          <Link to={`/contact`} className="btn black-outline ">
-            <button className="uppercase">get in touch</button>
-          </Link>
+          <div className="singleBtn">
+            <Link to={`/work`} className="btnGreen ">
+              <button className="uppercase"> check out more projects</button>
+            </Link>
+            <Link to={`/contact`} className="btn black-outline ">
+              <button className="uppercase">get in touch</button>
+            </Link>
+          </div>
         </div>
       </section>
       <Navbar color="mainColor" />

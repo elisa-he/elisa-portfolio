@@ -381,8 +381,8 @@ template {
 
 .dot {
   display: inline-block;
-  width: 2px;
-  height: 2px;
+  width: 2.5px;
+  height: 2.5px;
   position: relative;
   background-color: black;
   border: 2px solid black;
@@ -399,6 +399,10 @@ button.twist {
   visibility: visible;
 }
 
+.navMenu {
+  width: 24rem;
+}
+
 .navLink.disable {
   opacity: 0;
   visibility: hidden;
@@ -408,9 +412,12 @@ button.twist {
   display: flex;
   width: 22.125rem;
   border-radius: 10rem;
-  height: 2.875rem;
+  height: 3rem;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 0;
 }
 .navLink ul {
   display: flex;
@@ -450,6 +457,7 @@ button.twist {
   cursor: pointer;
   position: absolute;
   flex-direction: column;
+  z-index: 1;
 }
 
 .fixedMenu {
@@ -605,6 +613,11 @@ h2.uppercase {
   margin-top: 1.9375rem;
 }
 
+.workWrap:not(:last-child) {
+  border-bottom: 1px solid #C4C9A5;
+  padding-bottom: 1rem;
+}
+
 .workCap {
   display: flex;
   justify-content: space-between;
@@ -667,6 +680,10 @@ h2.uppercase {
   .workContent .workWrap:last-child {
     padding-bottom: 0;
   }
+  .workContent .workWrap:not(:last-child) {
+    border-bottom: none;
+    padding-bottom: none;
+  }
 }
 .blue {
   background: linear-gradient(to bottom, transparent 50%, #88B5DF 50%);
@@ -709,6 +726,9 @@ p.center {
 }
 #single h2 {
   margin-bottom: 1.9375rem;
+}
+#single p {
+  line-height: 2;
 }
 
 .portfolioContent {
@@ -756,12 +776,9 @@ p.center {
   margin: 0;
 }
 
-.noshow {
-  display: none;
-}
-
-.desc.active {
-  display: block;
+.desc {
+  white-space: pre-line;
+  vertical-align: bottom;
 }
 
 .check {
@@ -815,6 +832,11 @@ p.center {
   color: black;
 }
 
+.singleBtn {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .btn, .btnGreen {
   margin: 0.2rem auto;
   text-decoration: none;
@@ -825,127 +847,52 @@ p.center {
   color: white;
 }
 
+div.desc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.desc > * {
+  padding: 2rem 0;
+}
+
+.highlightWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.highlightWrap p {
+  font-weight: 700;
+}
+
+.highlightImg {
+  width: 20rem;
+  height: auto;
+}
+
 @media screen and (min-width: 865px) {
   .portfolioContent {
     max-width: 40rem;
   }
-  .portfolioContent p {
+  .portfolioContent p, .portfolioContent li {
     font-size: 1rem;
   }
   .portfolioContent .highlight h2 {
     font-size: 2rem;
   }
-}
-.area {
-  width: 100%;
-  z-index: -1;
-}
-
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.circles li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgba(51, 144, 219, 0.2);
-  animation: animated 25s linear infinite;
-  bottom: -150px;
-}
-
-.circles li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-@keyframes animated {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
+  .singleBtn {
+    flex-direction: row;
   }
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
+  .highlightWrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .highlightImg {
+    padding-right: 4rem;
+    width: 20rem;
+    height: auto;
   }
 }
 body {

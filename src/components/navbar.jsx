@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 export default function Navbar({ color }) {
   const [openNav, setNav] = useState(false);
 
@@ -26,9 +27,9 @@ export default function Navbar({ color }) {
         <nav className={`navLink ${color} ${openNav ? "active" : "disable"}`}>
           <ul className="navList">
             <li onClick={closeMenu}>
-              <Link to={`/`}>
+              <HashLink smooth to="/#about">
                 <button className="navBtn">About</button>
-              </Link>
+              </HashLink>
             </li>
             <li onClick={closeMenu}>
               <Link to={`/work`}>

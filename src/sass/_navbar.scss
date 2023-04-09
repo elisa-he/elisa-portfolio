@@ -2,8 +2,8 @@
 //Nav
 .dot {
     display: inline-block;
-    width: 2px;
-    height: 2px;
+    width: 2.5px;
+    height: 2.5px;
     position: relative;
     background-color: black;
     border: 2px solid black;
@@ -23,14 +23,20 @@ button.twist {
 .navLink.active  {
     opacity: 1;
     visibility: visible;
-    // transition: opacity .3s ease-in-out;
     
     
+    
+}
+
+
+.navMenu {
+    width: 24rem;
 }
 
 .navLink.disable {
     opacity: 0;
     visibility: hidden;
+    
    
 }
 
@@ -38,10 +44,12 @@ button.twist {
     display: flex;
     width: 22.125rem;
     border-radius: 10rem;
-    height: 2.875rem;
+    height: 3rem;
     align-items: center;
     justify-content: space-around;
-   
+    position: relative;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 0;
 
     ul {
         display: flex;
@@ -87,7 +95,7 @@ button.twist {
         cursor: pointer;
         position: absolute;
         flex-direction: column;
-       
+        z-index: 1;
        
     }
 
