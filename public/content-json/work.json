@@ -1,7 +1,8 @@
 [
     {
         "image": "/src/image/gif/porfolio-gif.gif",
-        "title":"Portfolio", 
+        "title":"Portfolio",
+        "link": "https://elisacodes.com/", 
         "usedSkill":
         [
             "react", "vite", "sass", "javascript"
@@ -31,6 +32,7 @@
      {
         "image": "/src/image/gif/binge-watch-gif.gif",
         "title": "BingeWatch", 
+        "link": "https://elisacodes.com/movie-db/",
         "usedSkill":
         [
             "react API", "sass", "javascript"
@@ -58,6 +60,7 @@
      {
         "image": "/src/image/gif/rps-gif.gif",
         "title": "Extreme RPS", 
+        "link": "https://elisacodes.com/RPS/",
         "usedSkill":
         [
            "bootstrap", "javascript"

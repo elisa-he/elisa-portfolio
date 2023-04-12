@@ -37,6 +37,8 @@ export default function Single() {
 
   const image = works?.length && works[workId]?.image;
 
+  const link = works?.length && works[workId]?.link;
+
   const team =
     works?.length && works[workId]?.team.map((t, i) => <li key={i}>{t}</li>);
 
@@ -65,7 +67,7 @@ export default function Single() {
           <p className="subtitle uppercase">team</p>
           <ul>{team}</ul>
           <p className="workDesc">{projectDesc}</p>
-          <Link to={`/`} className="btn black-outline ">
+          <Link to={link} className="btn black-outline ">
             <button className="uppercase">live site</button>
           </Link>
 
