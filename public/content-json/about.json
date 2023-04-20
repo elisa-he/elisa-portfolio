@@ -4,11 +4,11 @@
         "image": [
             {
                 "id":1, 
-                "url":"src/image/Nurse.png"
+                "url":"/assets/Nurse.png"
             }, 
             {
                 "id":2, 
-                "url":"src/image/Computer.png"
+                "url":"/assets/Computer.png"
             }
         ],
         "description": [
